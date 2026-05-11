@@ -1,11 +1,11 @@
 # MeecroWaveh
 
 ## Team Members
--Boston Wyatt
--Ethan Gilchrist
--Kade Barker
--Lev Zurcher
--Nefi Serrano Ramirez
+- Boston Wyatt
+- Ethan Gilchrist
+- Kade Barker
+- Lev Zurcher
+- Nefi Serrano Ramirez
 
 ## Software Description
 A web-based program that displays a map for BYU-I students that locates microwaves, vending machines, and printers/copy machines. The student user can filter between these categories. They can also navigate to the microwave nearest to them using Google Maps.
