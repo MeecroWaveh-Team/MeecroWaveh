@@ -1,9 +1,57 @@
+body {
+    background-color: #faf9f9;
+    font-family: "Exo 2", sans-serif;
+}
+
+/*--------------- HEADER CSS   ---------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    margin: .5em;
+    background-color: #89b0ae;   
+}
+ul li {
+    float: left;
+}
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul li a:hover {
+    background-color: #555b6e;
+}
+header {
+    background-color: #bee3db;
+    padding-top: 1em;
+}
+h1 {
+    letter-spacing: 1px;
+}
+/*--------------- Body CSS   ---------------*/
 h1, p {
     text-align: center;
 }
 
 #map {
     margin: 0 auto;
-    height: 360px;
-    width: 90%;  
+    height: 440px;
+    width: 90%;
+    border: 50px;
+    background-color: #ffd6ba;
+}
+
+/*--------------- Footer CSS   ---------------*/
+footer {
+    background-color: #bee3db;
+    padding: .75em;
+}
+.footer_text {
+    float: right;
 }
