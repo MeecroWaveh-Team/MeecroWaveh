@@ -1,34 +1,47 @@
-// 1. Initialize map on the MC
-var map = L.map('map').setView([43.819046, -111.783228], 18);
+var map = L.map('map').setView([43.816046, -111.783228], 15);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 21,
+    maxNativeZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-// 2. LINK YOUR MAPWARPER URL HERE
-// This pulls your exact warped floor plan straight from MapWarper
-var floor1Image = L.tileLayer('https://mapwarper.net/maps/tile/107398/{z}/{x}/{y}.png', {
-    minZoom: 19,  // HIDES the floor plan if they zoom out further than this!
-    maxZoom: 21,  // Allows them to zoom in extra close to see rooms
+var floor1Image = L.tileLayer('https://mapwarper.net/maps/tile/107450/{z}/{x}/{y}.png', {
+    minZoom: 18,  
+    maxZoom: 21,  
     opacity: 0.85,
     attribution: '&copy; MapWarper'
 });
 
-// 3. Create your Floor Groups 
-// Floor 1 now contains your MapWarper blueprint AND your markers
+var floor2Image = L.tileLayer('https://mapwarper.net/maps/tile/107398/{z}/{x}/{y}.png', {
+    minZoom: 18,  
+    maxZoom: 21,  
+    opacity: 0.85,
+    attribution: '&copy; MapWarper'
+});
+
+var floor3Image = L.tileLayer('https://mapwarper.net/maps/tile/107451/{z}/{x}/{y}.png', {
+    minZoom: 18,  
+    maxZoom: 21,  
+    opacity: 0.85,
+    attribution: '&copy; MapWarper'
+});
+
 var floor1Group = L.layerGroup([
     floor1Image, 
-    L.marker([43.819046, -111.783228]).bindPopup("<b>STC Floor 1:</b> Microwave near the Crossroads")
+    L.marker([43.814467, -111.784851]).bindPopup("<b>STC Floor 1:</b> Microwave near the Crossroads")
 ]);
 
-var floor2Group = L.layerGroup(); // Empty until you warp Floor 2!
-var floor3Group = L.layerGroup(); 
+var floor2Group = L.layerGroup([
+    floor2Image, 
+    L.marker([43.814498, -111.784423]).bindPopup("<b>STC Floor 2:</b> Printer Lab")
+]);
 
-// 4. Show Floor 1 by default
-floor1Group.addTo(map);
+var floor3Group = L.layerGroup([
+    floor3Image,
+    L.marker([43.814769, -111.785001]).bindPopup("<b>STC Floor 3:</b> Vending Machine / Microwave")
+]);
 
-// 5. UI Layer Control
 var floorLayers = {
     "Floor 3": floor3Group,
     "Floor 2": floor2Group,
@@ -36,14 +49,28 @@ var floorLayers = {
 };
 L.control.layers(floorLayers, null, { collapsed: false }).addTo(map);
 
-// DEBUG Coordinate Tool
+map.on('zoomend', function() {
+    var currentZoom = map.getZoom();
+    
+    if (currentZoom < 18) { 
+        if (map.hasLayer(floor1Group)) map.removeLayer(floor1Group);
+        if (map.hasLayer(floor2Group)) map.removeLayer(floor2Group);
+        if (map.hasLayer(floor3Group)) map.removeLayer(floor3Group);
+    } else {
+        if (!map.hasLayer(floor1Group) && !map.hasLayer(floor2Group) && !map.hasLayer(floor3Group)) {
+            floor1Group.addTo(map);
+            
+            var layerControlElement = document.querySelector('.leaflet-control-layers-selector[type="radio"]:last-child');
+            if (layerControlElement) layerControlElement.checked = true;
+        }
+    }
+});
+
 var popup = L.popup();
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
         .setContent("Clicked Coord: <code>[" + e.latlng.lat.toFixed(6) + ", " + e.latlng.lng.toFixed(6) + "]</code>")
         .openOn(map);
-
-    itemDetails.innerHTML = "<p>You clicked the map at " + e.latlng.toString() + "</p>";
 }
 map.on('click', onMapClick);
