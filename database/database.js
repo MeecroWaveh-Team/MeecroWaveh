@@ -1,7 +1,7 @@
 // so it looks like there's no way to read a file with javascript without using Node, which makes testing
 // difficult, but then I remembered I can just put the json directly in the javascript.
 // I'll leave the json files in as separate files in case we want to read them in with Node instead.
-let buildings = [
+export const buildings = [
 {"building_id":2, "building_name":"STC", "latitude":43.81465, "longitude":-111.78466, "coordinates":"43\u00b048'52\"N 111\u00b047'4\"W"},
 {"building_id":3, "building_name":"Austin", "latitude":43.8158, "longitude":-111.78454, "coordinates":"43\u00b048'57\"N 111\u00b047'4\"W"},
 {"building_id":4, "building_name":"Benson", "latitude":43.81538, "longitude":-111.7832, "coordinates":"43\u00b048'55\"N 111\u00b046'59\"W"},
@@ -129,8 +129,7 @@ const microwave = microwaves[1];
 //         break;
 //     }
 // }
-const building = buildings[microwaves[i].building_id];
-
+//const building = buildings[microwaves[i].building_id];
 let room = rooms[0];
 for (let i = 0; i < rooms.length; i++)
 {
@@ -141,5 +140,7 @@ for (let i = 0; i < rooms.length; i++)
     }
 }
 
-textBox.innerHTML = `The microwave in the ${room.room_name.toLowerCase()} of the 
-${building.building_name} can be found here: ${microwave.location_description}.`;
+// textBox.innerHTML = `The microwave in the ${room.room_name.toLowerCase()} of the 
+// ${building.building_name} can be found here: ${microwave.location_description}.`;
+
+// Exports buildings to map.js for zoomed-out mode
