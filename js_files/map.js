@@ -2,7 +2,7 @@ import { buildings } from '../database/database.js';
 
 var map = L.map('map').setView([43.816046, -111.783228], 15);
 var building_markers = null;
-displayZoomedOut()  //default zoom on loaded page
+displayZoomedOut(true)  //default zoom on loaded page
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 21,
@@ -55,12 +55,12 @@ L.control.layers(floorLayers, null, { collapsed: false }).addTo(map);
 
 map.on('zoomend', function() {
     var currentZoom = map.getZoom();
+    console.log(currentZoom);
     
     if (currentZoom < 18) { 
         if (map.hasLayer(floor1Group)) map.removeLayer(floor1Group);
         if (map.hasLayer(floor2Group)) map.removeLayer(floor2Group);
         if (map.hasLayer(floor3Group)) map.removeLayer(floor3Group);
-        console.log(currentZoom);
         displayZoomedOut(true);
     } else {
         if (!map.hasLayer(floor1Group) && !map.hasLayer(floor2Group) && !map.hasLayer(floor3Group)) {
@@ -70,12 +70,12 @@ map.on('zoomend', function() {
             if (layerControlElement) layerControlElement.checked = true;
         }
         displayZoomedOut(false);
-        console.log(currentZoom);
     }
 });
 
 function displayZoomedOut(load_it) {
     if (load_it) {
+        if (building_markers && building_markers.length > 0) return;
         building_markers = [];
         for (const building of buildings) {
 
@@ -88,10 +88,10 @@ function displayZoomedOut(load_it) {
         console.log(building_markers);
     }
     else {
-        if (building_markers)
-        building_markers.forEach(marker => {
-            map.removeLayer(marker);
-        });
+        if (building_markers) {
+            building_markers.forEach(marker => map.removeLayer(marker));
+            building_markers = null;
+        }
         console.log("Should be empty");
         console.log(building_markers);
     }
