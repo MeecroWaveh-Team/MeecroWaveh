@@ -1,9 +1,9 @@
-body {
-    background-color: #faf9f9;
-    font-family: "Exo 2", sans-serif;
-}
-
 /*--------------- HEADER CSS   ---------------*/
+.icon {
+    max-width: 50%;
+    height: auto;
+    float: right;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -12,7 +12,7 @@ ul {
 }
 li {
     margin: .5em;
-    background-color: #89b0ae;   
+    background-color: #2f6690;   
 }
 ul li {
     float: left;
@@ -24,15 +24,25 @@ ul li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-ul li a:hover {
-    background-color: #555b6e;
+ul li a:hover, #theme:hover {
+    background-color: #81c3d7;
 }
 header {
-    background-color: #bee3db;
+    background-color: #3a7ca5;
     padding-top: 1em;
 }
-h1 {
+header.dark {
+    background-color: #16425b;
+}
+header h1 {
     letter-spacing: 1px;
+    font-size: 2em;
+}
+#theme {
+    background-color: #16425b;
+}
+#theme.dark {
+    background-color: #3a7ca5;
 }
 /*--------------- Body CSS   ---------------*/
 h1, p {
@@ -49,12 +59,26 @@ h1, p {
 }
 
 body {
-    background-color: #dbeafe;
+    background-color: #d9dcd6;
+    font-family: "Exo 2", sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
     color: #1e293b;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark {
-    background-color: #172554;
+    background-color: #16425b;
     color: white;
 }
+
+.explanation p {
+    margin: 10px; /*Not working yet*/
+}
+
+#anim {
+    margin: auto;
+
+}
+/*--------------- Footer CSS   ---------------*/

@@ -18,11 +18,19 @@
 
 <body class="bg-blue-100 text-slate-800 transition-colors duration-300">
     <header class="flex justify-between items-center p-4">
-        <h1 class="text-3x1 font-bold">MeecroWaveh</h1>
-
+        <div id="logo">
+            <h1 class="text-3x1 font-bold">MeecroWaveh</h1>
+            <!--<img class="icon" src="images\microwave-oven.png" alt="Microwave oven icons created by Prosymbols Premium - Flaticon" >-->
+        </div>
+        <ul>
+            <li><a href="index.html">Map</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
         <button id="theme" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">Dark Mode</button>
     </header>
-    <p>Find microwaves, vending machines, and printers on the BYU-I campus.</p>
+    <div id="explanation">
+        <p>Find microwaves, vending machines, and printers on the BYU-I campus.</p>
+    </div>
     <div id="map"></div>                        <!-- The map gets loaded here -->
     <div id="item_details"></div>               <!-- Details about respective item (microwave, vendor, printer) show up here -->
     <div id="review_section"></div>             <!-- Users can rate the item and add comments about the item that will show up publicly -->

@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
+    <link rel="stylesheet" href="css_files/tailwind.css">
     <link rel="stylesheet" href="css_files/MeecroWaveh.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
 </head>
 <body>
+    <!-- Old header -->
+    <!--
     <header>
         <h1>MeecroWaveh</h1>
         <ul>
@@ -22,6 +25,18 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </header>
+    -->
+    <header class="flex justify-between items-center p-4">
+        <div id="logo">
+            <h1 class="text-3x1 font-bold">MeecroWaveh</h1>
+            <!--<img class="icon" src="images\microwave-oven.png" alt="Microwave oven icons created by Prosymbols Premium - Flaticon" >-->
+        </div>        <ul>
+            <li><a href="index.html">Map</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="theme" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">Dark Mode</button>
+    </header>
     <p>Is a vending machine missing? Did they move a microwave? <br> Contact us at 555-5555</p>
+    <img id="anim" src="images\kris_run.gif" alt="kris deltarune running" >
 </body>
 </html>
