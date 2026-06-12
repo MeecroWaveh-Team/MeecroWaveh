@@ -16,7 +16,7 @@
         crossorigin=""></script>
 </head>
 
-<body class="bg-blue-100 text-slate-800 dark:bg-blue-950 dark:text-white transition-colors duration-300">
+<body class="bg-blue-100 text-slate-800 transition-colors duration-300">
     <header class="flex justify-between items-center p-4">
         <h1 class="text-3x1 font-bold">MeecroWaveh</h1>
 
@@ -29,7 +29,9 @@
     <div id="item_report_section"></div>        <!-- Used for reporting on things like cleanliness, location change, and incorrect information -->
     <div id="general_report_section"></div>     <!-- Used for reporting new locations of items, functionality issues, or general issues -->
     
-    <script src="js_files/map.js" defer></script>
+    
+    <script type="module" src="database/database.js" defer></script> 
+    <script type="module" src="js_files/map.js" defer></script>
     <script src="js_files/theme.js" defer></script>
 </body>
 

@@ -47,3 +47,14 @@ h1, p {
     border: 2px solid #ccc;
     border-radius: 8px;
 }
+
+body {
+    background-color: #dbeafe;
+    color: #1e293b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #172554;
+    color: white;
+}
