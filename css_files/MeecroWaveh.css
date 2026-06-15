@@ -84,6 +84,10 @@ body.dark {
     margin: auto;
 
 }
+
+body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet-control-zoom-out, body.dark .leaflet-control-attribution, body.dark .leaflet-control {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
 /*--------------- Footer CSS   ---------------*/
 footer{
     margin: 1em;
