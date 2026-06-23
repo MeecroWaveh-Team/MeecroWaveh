@@ -9,4 +9,6 @@
  {"room_id":14, "room_name":"201", "building_id":4, "floor":2, "latitude":0.0, "longitude":0.0},
  {"room_id":15, "room_name":"145", "building_id":13, "floor":1, "latitude":0.0, "longitude":0.0},
  {"room_id":16, "room_name":"254", "building_id":11, "floor":2, "latitude":0.0, "longitude":0.0},
- {"room_id":17, "room_name":"Unknown", "building_id":6, "floor":1, "latitude":0.0, "longitude":0.0}]
+ {"room_id":17, "room_name":"Unknown", "building_id":6, "floor":1, "latitude":0.0, "longitude":0.0},
+ {"room_id":18, "room_name":"320A", "building_id":2, "floor":3, "latitude":43.81452, "longitude":-111.78471},
+ {"room_id":19, "room_name":"367", "building_id":2, "floor":3, "latitude":43.8148, "longitude":-111.7846}]

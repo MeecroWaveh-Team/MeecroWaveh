@@ -1,3 +1,6 @@
 [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452},
  {"microwave_id":6, "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
- {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102}]
+ {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102},
+ {"microwave_id":8, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82015, "longitude":-111.78162},
+ {"microwave_id":9, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312},
+ {"microwave_id":10, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496}]

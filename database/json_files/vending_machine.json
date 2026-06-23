@@ -4,4 +4,14 @@
  {"vending_machine_id":9, "vendor":"Crossroads (Snacks)", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81514, "longitude":-111.78091},
  {"vending_machine_id":10, "vendor":"7 Up", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247},
  {"vending_machine_id":11, "vendor":"Crossroads (Snacks)", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247},
- {"vending_machine_id":12, "vendor":"Pepsi", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825}]
+ {"vending_machine_id":12, "vendor":"Pepsi", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825},
+ {"vending_machine_id":13, "vendor":"", "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81557, "longitude":-111.78328},
+ {"vending_machine_id":14, "vendor":"", "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81594, "longitude":-111.78324},
+ {"vending_machine_id":15, "vendor":"", "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82037, "longitude":-111.78195},
+ {"vending_machine_id":16, "vendor":"", "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82039, "longitude":-111.78201},
+ {"vending_machine_id":17, "vendor":"", "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312},
+ {"vending_machine_id":18, "vendor":"", "location_description":"Unknown", "building_id":17, "room_id":0, "latitude":43.81697, "longitude":-111.78136},
+ {"vending_machine_id":19, "vendor":"", "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496},
+ {"vending_machine_id":20, "vendor":"", "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81987, "longitude":-111.78584},
+ {"vending_machine_id":21, "vendor":"", "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81921, "longitude":-111.7817},
+ {"vending_machine_id":22, "vendor":"", "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82087, "longitude":-111.78233}]
