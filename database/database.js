@@ -19,7 +19,8 @@ export const buildings =  [{"building_id":2, "building_name":"STC", "latitude":4
  {"building_id":18, "building_name":"Hinckley", "latitude":43.81584, "longitude":-111.7799, "coordinates":"43\u00b048'57\"N 111\u00b046'48\"W"},
  {"building_id":19, "building_name":"Rigby", "latitude":43.81703, "longitude":-111.78454, "coordinates":"43\u00b049'01\"N 111\u00b047'04\"W"},
  {"building_id":20, "building_name":"Biddulph", "latitude":43.81704, "longitude":-111.78518, "coordinates":"43\u00b049'01\"N 111\u00b047'07\"W"},
- {"building_id":21, "building_name":"Health Center", "latitude":43.81675, "longitude":-111.77938, "coordinates":"43\u00b049'00\"N 111\u00b046'46\"W"}];
+ {"building_id":21, "building_name":"Health Center", "latitude":43.81675, "longitude":-111.77938, "coordinates":"43\u00b049'00\"N 111\u00b046'46\"W"},
+ {"building_id":22, "building_name":"ETC", "latitude":43.81411, "longitude":-111.78310, "coordinates":"43\u00b048'51\"N 111\u00b046'59\"W"}];
 let microwaves = [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452},
  {"microwave_id":6, "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
  {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102},
