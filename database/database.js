@@ -52,7 +52,7 @@ export const printers = [{"printer_id":5, "location_description":"Against the so
  {"printer_id":27, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81526, "longitude":-111.78335},
  {"printer_id":28, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81592, "longitude":-111.7828},
  {"printer_id":29, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312}];
-let rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floor":2, "latitude":43.8145, "longitude":-111.78452},
+export const rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floor":2, "latitude":43.8145, "longitude":-111.78452},
  {"room_id":7, "room_name":"North Hallway", "building_id":5, "floor":2, "latitude":43.81513, "longitude":-111.78091},
  {"room_id":8, "room_name":"West Hallway", "building_id":5, "floor":2, "latitude":0.0, "longitude":0.0},
  {"room_id":9, "room_name":"North Hallway", "building_id":5, "floor":3, "latitude":0.0, "longitude":0.0},
