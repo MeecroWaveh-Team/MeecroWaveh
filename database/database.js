@@ -20,7 +20,9 @@ export const buildings =  [{"building_id":2, "building_name":"STC", "latitude":4
  {"building_id":19, "building_name":"Rigby", "latitude":43.81703, "longitude":-111.78454, "coordinates":"43\u00b049'01\"N 111\u00b047'04\"W"},
  {"building_id":20, "building_name":"Biddulph", "latitude":43.81704, "longitude":-111.78518, "coordinates":"43\u00b049'01\"N 111\u00b047'07\"W"},
  {"building_id":21, "building_name":"Health Center", "latitude":43.81675, "longitude":-111.77938, "coordinates":"43\u00b049'00\"N 111\u00b046'46\"W"},
- {"building_id":22, "building_name":"ETC", "latitude":43.81411, "longitude":-111.78310, "coordinates":"43\u00b048'51\"N 111\u00b046'59\"W"}];
+ {"building_id":22, "building_name":"ETC", "latitude":43.81411, "longitude":-111.78310, "coordinates":"43\u00b048'51\"N 111\u00b046'59\"W"},
+ {"building_id":23, "building_name":"Visual Arts Studio", "latitude":43.820852282350366, "longitude":-111.78171489994133, "coordinates":"43\u00b049'15\"N 111\u00b046'54\"W"},
+ {"building_id":24, "building_name":"Agricultural Engineering", "latitude":43.813261392404996, "longitude":-111.78317152575522, "coordinates":"43\u00b048'47\"N 111\u00b046'59\"W"}];
 export const microwaves = [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452},
  {"microwave_id":6, "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
  {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102},
@@ -52,7 +54,7 @@ export const printers = [{"printer_id":5, "location_description":"Against the so
  {"printer_id":27, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81526, "longitude":-111.78335},
  {"printer_id":28, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81592, "longitude":-111.7828},
  {"printer_id":29, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312}];
-let rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floor":2, "latitude":43.8145, "longitude":-111.78452},
+export const rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floor":2, "latitude":43.8145, "longitude":-111.78452},
  {"room_id":7, "room_name":"North Hallway", "building_id":5, "floor":2, "latitude":43.81513, "longitude":-111.78091},
  {"room_id":8, "room_name":"West Hallway", "building_id":5, "floor":2, "latitude":0.0, "longitude":0.0},
  {"room_id":9, "room_name":"North Hallway", "building_id":5, "floor":3, "latitude":0.0, "longitude":0.0},
