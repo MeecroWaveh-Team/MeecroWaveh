@@ -23,37 +23,37 @@ export const buildings =  [{"building_id":2, "building_name":"STC", "latitude":4
  {"building_id":22, "building_name":"ETC", "latitude":43.81411, "longitude":-111.78310, "coordinates":"43\u00b048'51\"N 111\u00b046'59\"W"},
  {"building_id":23, "building_name":"Visual Arts Studio", "latitude":43.820852282350366, "longitude":-111.78171489994133, "coordinates":"43\u00b049'15\"N 111\u00b046'54\"W"},
  {"building_id":24, "building_name":"Agricultural Engineering", "latitude":43.813261392404996, "longitude":-111.78317152575522, "coordinates":"43\u00b048'47\"N 111\u00b046'59\"W"}];
-export const microwaves = [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452},
- {"microwave_id":6, "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
- {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102},
- {"microwave_id":8, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82015, "longitude":-111.78162},
- {"microwave_id":9, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312},
- {"microwave_id":10, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496}];
-export const printers = [{"printer_id":5, "location_description":"Against the south wall", "building_id":5, "room_id":12, "latitude":43.81479, "longitude":-111.7808},
- {"printer_id":6, "location_description":"Along the south wall, near where the hallway opens into the atrium", "building_id":5, "room_id":8, "latitude":43.8148, "longitude":-111.78113},
- {"printer_id":7, "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825},
- {"printer_id":8, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81917, "longitude":-111.78153},
- {"printer_id":9, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81916, "longitude":-111.78155},
- {"printer_id":10, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81916, "longitude":-111.78155},
- {"printer_id":11, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.819, "longitude":-111.78135},
- {"printer_id":12, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82017, "longitude":-111.78158},
- {"printer_id":13, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82021, "longitude":-111.78158},
- {"printer_id":14, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82035, "longitude":-111.78165},
- {"printer_id":15, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82038, "longitude":-111.7819},
- {"printer_id":16, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82029, "longitude":-111.78202},
- {"printer_id":17, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82008, "longitude":-111.78161},
- {"printer_id":18, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82021, "longitude":-111.78187},
- {"printer_id":19, "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82085, "longitude":-111.78233},
- {"printer_id":20, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81964, "longitude":-111.7843},
- {"printer_id":21, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496},
- {"printer_id":22, "location_description":"Unknown", "building_id":7, "room_id":0, "latitude":43.81824, "longitude":-111.78226},
- {"printer_id":23, "location_description":"Unknown", "building_id":18, "room_id":0, "latitude":43.81581, "longitude":-111.78007},
- {"printer_id":24, "location_description":"Unknown", "building_id":18, "room_id":0, "latitude":43.8159, "longitude":-111.7797},
- {"printer_id":25, "location_description":"Unknown", "building_id":17, "room_id":0, "latitude":43.81707, "longitude":-111.78156},
- {"printer_id":26, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81594, "longitude":-111.78324},
- {"printer_id":27, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81526, "longitude":-111.78335},
- {"printer_id":28, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81592, "longitude":-111.7828},
- {"printer_id":29, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312}];
+export const microwaves = [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452, "floor":2},
+ {"microwave_id":6, "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091, "floor":2},
+ {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102, "floor":3},
+ {"microwave_id":8, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82015, "longitude":-111.78162, "floor":-1},
+ {"microwave_id":9, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312, "floor":-1},
+ {"microwave_id":10, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496, "floor":-1}];
+export const printers = [{"printer_id":5, "location_description":"Against the south wall", "building_id":5, "room_id":12, "latitude":43.81479, "longitude":-111.7808, "floor":3},
+ {"printer_id":6, "location_description":"Along the south wall, near where the hallway opens into the atrium", "building_id":5, "room_id":8, "latitude":43.8148, "longitude":-111.78113, "floor":2},
+ {"printer_id":7, "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825, "floor":1},
+ {"printer_id":8, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81917, "longitude":-111.78153, "floor":-1},
+ {"printer_id":9, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81916, "longitude":-111.78155, "floor":-1},
+ {"printer_id":10, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81916, "longitude":-111.78155, "floor":-1},
+ {"printer_id":11, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.819, "longitude":-111.78135, "floor":-1},
+ {"printer_id":12, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82017, "longitude":-111.78158, "floor":-1},
+ {"printer_id":13, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82021, "longitude":-111.78158, "floor":-1},
+ {"printer_id":14, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82035, "longitude":-111.78165, "floor":-1},
+ {"printer_id":15, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82038, "longitude":-111.7819, "floor":-1},
+ {"printer_id":16, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82029, "longitude":-111.78202, "floor":-1},
+ {"printer_id":17, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82008, "longitude":-111.78161, "floor":-1},
+ {"printer_id":18, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82021, "longitude":-111.78187, "floor":-1},
+ {"printer_id":19, "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82085, "longitude":-111.78233, "floor":-1},
+ {"printer_id":20, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81964, "longitude":-111.7843, "floor":-1},
+ {"printer_id":21, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496, "floor":-1},
+ {"printer_id":22, "location_description":"Unknown", "building_id":7, "room_id":0, "latitude":43.81824, "longitude":-111.78226, "floor":-1},
+ {"printer_id":23, "location_description":"Unknown", "building_id":18, "room_id":0, "latitude":43.81581, "longitude":-111.78007, "floor":-1},
+ {"printer_id":24, "location_description":"Unknown", "building_id":18, "room_id":0, "latitude":43.8159, "longitude":-111.7797, "floor":-1},
+ {"printer_id":25, "location_description":"Unknown", "building_id":17, "room_id":0, "latitude":43.81707, "longitude":-111.78156, "floor":-1},
+ {"printer_id":26, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81594, "longitude":-111.78324, "floor":-1},
+ {"printer_id":27, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81526, "longitude":-111.78335, "floor":-1},
+ {"printer_id":28, "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81592, "longitude":-111.7828, "floor":-1},
+ {"printer_id":29, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312, "floor":-1}];
 export const rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floor":2, "latitude":43.8145, "longitude":-111.78452},
  {"room_id":7, "room_name":"North Hallway", "building_id":5, "floor":2, "latitude":43.81513, "longitude":-111.78091},
  {"room_id":8, "room_name":"West Hallway", "building_id":5, "floor":2, "latitude":0.0, "longitude":0.0},
@@ -68,23 +68,23 @@ export const rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floo
  {"room_id":17, "room_name":"Unknown", "building_id":6, "floor":1, "latitude":0.0, "longitude":0.0},
  {"room_id":18, "room_name":"320A", "building_id":2, "floor":3, "latitude":43.81452, "longitude":-111.78471},
  {"room_id":19, "room_name":"367", "building_id":2, "floor":3, "latitude":43.8148, "longitude":-111.7846}];
-export const vending_machines = [{"vending_machine_id":6, "vendor":"7 Up", "location_description":"North corner", "building_id":5, "room_id":12, "latitude":43.81481, "longitude":-111.78098},
- {"vending_machine_id":7, "vendor":"Good to Go", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81512, "longitude":-111.78091},
- {"vending_machine_id":8, "vendor":"7 Up", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
- {"vending_machine_id":9, "vendor":"Crossroads (Snacks)", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81514, "longitude":-111.78091},
- {"vending_machine_id":10, "vendor":"7 Up", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247},
- {"vending_machine_id":11, "vendor":"Crossroads (Snacks)", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247},
- {"vending_machine_id":12, "vendor":"Pepsi", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825},
- {"vending_machine_id":13, "vendor":"", "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81557, "longitude":-111.78328},
- {"vending_machine_id":14, "vendor":"", "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81594, "longitude":-111.78324},
- {"vending_machine_id":15, "vendor":"", "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82037, "longitude":-111.78195},
- {"vending_machine_id":16, "vendor":"", "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82039, "longitude":-111.78201},
- {"vending_machine_id":17, "vendor":"", "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312},
- {"vending_machine_id":18, "vendor":"", "location_description":"Unknown", "building_id":17, "room_id":0, "latitude":43.81697, "longitude":-111.78136},
- {"vending_machine_id":19, "vendor":"", "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496},
- {"vending_machine_id":20, "vendor":"", "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81987, "longitude":-111.78584},
- {"vending_machine_id":21, "vendor":"", "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81921, "longitude":-111.7817},
- {"vending_machine_id":22, "vendor":"", "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82087, "longitude":-111.78233}];
+export const vending_machines = [{"vending_machine_id":6, "vendor":"7 Up", "location_description":"North corner", "building_id":5, "room_id":12, "latitude":43.81481, "longitude":-111.78098, "floor":3},
+ {"vending_machine_id":7, "vendor":"Good to Go", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81512, "longitude":-111.78091, "floor":2},
+ {"vending_machine_id":8, "vendor":"7 Up", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091, "floor":2},
+ {"vending_machine_id":9, "vendor":"Crossroads (Snacks)", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81514, "longitude":-111.78091, "floor":2},
+ {"vending_machine_id":10, "vendor":"7 Up", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247, "floor":1},
+ {"vending_machine_id":11, "vendor":"Crossroads (Snacks)", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247, "floor":1},
+ {"vending_machine_id":12, "vendor":"Pepsi", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825, "floor":1},
+ {"vending_machine_id":13, "vendor":"", "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81557, "longitude":-111.78328, "floor":-1},
+ {"vending_machine_id":14, "vendor":"", "location_description":"Unknown", "building_id":4, "room_id":0, "latitude":43.81594, "longitude":-111.78324, "floor":-1},
+ {"vending_machine_id":15, "vendor":"", "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82037, "longitude":-111.78195, "floor":-1},
+ {"vending_machine_id":16, "vendor":"", "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82039, "longitude":-111.78201, "floor":-1},
+ {"vending_machine_id":17, "vendor":"", "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312, "floor":-1},
+ {"vending_machine_id":18, "vendor":"", "location_description":"Unknown", "building_id":17, "room_id":0, "latitude":43.81697, "longitude":-111.78136, "floor":-1},
+ {"vending_machine_id":19, "vendor":"", "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496, "floor":-1},
+ {"vending_machine_id":20, "vendor":"", "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81987, "longitude":-111.78584, "floor":-1},
+ {"vending_machine_id":21, "vendor":"", "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81921, "longitude":-111.7817, "floor":-1},
+ {"vending_machine_id":22, "vendor":"", "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82087, "longitude":-111.78233, "floor":-1}];
  let vending_machine_has_items = [{"vending_machine_id":9, "item_id":6, "slot":"101"},
  {"vending_machine_id":9, "item_id":7, "slot":"103"},
  {"vending_machine_id":9, "item_id":8, "slot":"105"},
@@ -166,7 +166,7 @@ function addReview(reviewTable, reviewTableIndex, reviewStars, reviewText = "")
     }
 }
 
-function firstFloorIsntReal(building_id, splice = false)
+function firstFloorIsntReal(building_id, splice = false, spliceMicrowaves = false)
 {
     // Don't think the west entrance to the Ricks building should count as a floor?
     // Feed those rooms through this thing!
@@ -182,6 +182,29 @@ function firstFloorIsntReal(building_id, splice = false)
             {
                 rooms.splice(i, 1);
                 i--;
+            }
+        }
+    }
+
+    // Deals with the fact that floor numbers are now redundantly stored.
+    let pointsOfInterest = [microwaves, printers, vending_machines];
+    for (let i = 0; i < pointsOfInterest.length; i++)
+    {
+        for (let j = 0; i < pointsOfInterest[i].length; j++)
+        {
+            if (pointsOfInterest[i][j].building_id === building_id)
+            {
+                // -1 is the error state, don't touch! >:L
+                // we also refuse to decrement anything labeled floor 0, because then it would
+                // be assigned a floor value of -1, which is reserved for the error state.
+                if (pointsOfInterest[i][j].floor > 0)
+                    pointsOfInterest[i][j].floor--;
+                // This seems extreme, but I guess there's no reason to not make it an option?
+                if (pointsOfInterest[i][j].floor === 0 && spliceMicrowaves)
+                {
+                    pointsOfInterest[i].splice(j, 1);
+                    j--;
+                }
             }
         }
     }
