@@ -39,9 +39,19 @@ ul li a {
     text-decoration: none;
     border-radius: 10px;
 }
+body.dark ul li a {
+    background-color: #2F6690;
+}
 
 ul li a:hover, #theme:hover {
     background-color: #81c3d7;
+}
+
+body.dark ul li a:hover{
+    background-color: #3A7CA5;
+}
+body.dark #theme:hover {
+    background-color: #D9DCD6;
 }
 
 header h1 { 
@@ -55,7 +65,8 @@ header h1 {
 }
 
 body.dark #theme { 
-    background-color: #3a7ca5;
+    background-color: #81c3d7;
+    color: black;
 }
 /*--------------- Body CSS   ---------------*/
 h1, p {
@@ -87,12 +98,13 @@ body {
 }
 
 body.dark { 
-    background-color: #16425b;
+    background-color: #2F6690;
     color: white;
 }
 
 .explanation p {
-    margin: 10px; /*Not working yet*/
+    margin-top: 100px; /*Not working yet*/
+    margin-bottom: 100px;
 }
 
 #anim {
@@ -146,6 +158,23 @@ body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet
     vertical-align: middle;
 }
 
+body form button {
+    background-color: #16425B;
+}
+
+body form button:hover {
+    background-color: #81C3D7;
+}
+
+body.dark form button {
+    background-color: #81C3D7;
+    color: black;
+}
+
+body.dark form button:hover {
+    background-color: #D9DCD6;
+    color: black;
+}
 /*--------------- Footer CSS   ---------------*/
 footer{
     margin: 1em;
