@@ -29,9 +29,29 @@
         </ul>
         <button id="theme" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">Dark Mode</button>
     </header>
+    <div class="explanation">
+        <p>Is a vending machine missing? Did they move a microwave? <br> Contact us at 555-5555</p>
+    </div>
+    <div id="review_contatiner" class="p-4 max-w-xl mx-auto">
+        <h2 id="Review" class="text-xl font-bold mb-2"> Leave a Review </h2>
 
-    <p>Is a vending machine missing? Did they move a microwave? <br> Contact us at 555-5555</p>
-    <img id="anim" src="images\kris_run.gif" alt="kris deltarune running" >
+        <form class="flex flex-col gap-3">
+            <textarea
+                id="user-review"
+                name="user-review"
+                rows="3"
+                placeholder="Share your thoughts..."
+                class="w-full p-3 rounded-lg border border-slate-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-800 dark:text-white dark:border-slate-600 transition-colors">
+            </textarea>
+
+            <button
+                type="submit" 
+                class="self-end px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition-colors">
+                Submit
+            </button>
+        </form>
+    </div>
+    <!--<img id="anim" src="images\kris_run.gif" alt="kris deltarune running">-->
     <script src="js_files/theme.js" defer></script>
 
     <footer>

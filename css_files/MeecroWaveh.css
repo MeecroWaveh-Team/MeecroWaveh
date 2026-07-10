@@ -102,13 +102,26 @@ body.dark {
     color: white;
 }
 
-.explanation p {
-    margin-top: 100px; /*Not working yet*/
-    margin-bottom: 100px;
+.explanation p{
+    padding: 30px;
+    font-size: 1.2em;
 }
 
-#anim {
-    margin: auto;
+form {
+    justify-content: center;
+    width: 90%;
+    height: 100px;
+}
+#review_contatiner {
+    justify-items: center;
+}
+
+textarea {
+    border-color: black;
+    width: 50%;
+}
+body.dark textarea {
+    background-color: #d9dcd6;
 }
 
 body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet-control-zoom-out, body.dark .leaflet-control-attribution, body.dark .leaflet-control {
