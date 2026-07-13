@@ -38,28 +38,47 @@ if (reviewForm) {
         }
 
         const reviewText = reviewTextarea?.value.trim() || '';
-        const emailAddress = 'contactmeecrowaveh@gmail.com';
-        const subject = `Microwave review for #${activeReviewMicrowave.microwave_id}`;
-        const body = [
-            `Microwave ID: ${activeReviewMicrowave.microwave_id}`,
-            `Location: ${activeReviewMicrowave.location_description || 'Unknown'}`,
-            `Building ID: ${activeReviewMicrowave.building_id}`,
-            '',
-            reviewText
-        ].join('\n');
+
+        if (!reviewText) {
+            if (reviewTargetDetails) {
+                reviewTargetDetails.textContent = 'Please enter a review before submitting.';
+            }
+            return;
+        }
 
         addReview('microwaves', activeReviewMicrowave.microwave_id, 5, reviewText);
 
-        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
+        fetch('/api/reviews', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                microwaveId: activeReviewMicrowave.microwave_id,
+                location: activeReviewMicrowave.location_description || 'Unknown',
+                buildingId: activeReviewMicrowave.building_id,
+                review: reviewText
+            })
+        })
+            .then(async (response) => {
+                const data = await response.json().catch(() => ({}));
+                if (!response.ok) {
+                    throw new Error(data.error || 'Unable to send review.');
+                }
 
-        if (reviewTargetDetails) {
-            reviewTargetDetails.textContent = `Review drafted for Microwave #${activeReviewMicrowave.microwave_id}.`;
-        }
-
-        if (reviewTextarea) {
-            reviewTextarea.value = '';
-        }
+                if (reviewTargetDetails) {
+                    reviewTargetDetails.textContent = `Review sent for Microwave #${activeReviewMicrowave.microwave_id}.`;
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+                if (reviewTargetDetails) {
+                    reviewTargetDetails.textContent = error.message || 'Unable to send review.';
+                }
+            })
+            .finally(() => {
+                if (reviewTextarea) {
+                    reviewTextarea.value = '';
+                }
+            });
     });
 }
  
