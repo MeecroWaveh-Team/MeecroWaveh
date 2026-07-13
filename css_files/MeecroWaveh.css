@@ -25,6 +25,10 @@ li {
     margin: .5em;
     background-color: #2f6690;
     border-radius: 10px;
+    padding-left: .7em;
+    padding-right: .7em;
+    padding-top: .2em;
+    padding-bottom: .2em;
 }
 
 ul li {
