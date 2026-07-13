@@ -111,7 +111,6 @@ form {
     justify-content: center;
     width: 90%;
     height: 100px;
-    color: black;
 }
 #review_contatiner {
     justify-items: center;
@@ -120,6 +119,7 @@ form {
 textarea {
     border-color: black;
     width: 50%;
+    color: black;
 }
 body.dark textarea {
     background-color: #d9dcd6;
