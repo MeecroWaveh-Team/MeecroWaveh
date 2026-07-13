@@ -40,9 +40,11 @@
     <div id="general_report_section"></div>     <!-- Used for reporting new locations of items, functionality issues, or general issues -->
 
     <div id="review_contatiner" class="p-4 max-w-xl mx-auto">
-        <h2 id="Review" class="text-xl font-bold mb-2"> Leave a Review </h2>
+        <h2 id="Review" class="text-xl font-bold mb-2">Select a microwave on the map</h2>
+        <p id="review_target_details" class="text-sm text-slate-600 mb-3">Choose a microwave marker to connect your review to that location.</p>
 
         <form class="flex flex-col gap-3">
+            <input type="hidden" id="review-target-id" name="review-target-id" value="">
             <textarea
                 id="user-review"
                 name="user-review"

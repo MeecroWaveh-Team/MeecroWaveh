@@ -157,9 +157,9 @@ export const vending_machines = [{"vending_machine_id":6, "vendor":"7 Up", "loca
  {"item_id":27, "item_name":"Take 5", "price":0.0},
  {"item_id":44, "item_name":"Turkey Bacon Sandwich", "price":6.69},
  {"item_id":29, "item_name":"Twix", "price":0.0}];
- let reviews = [/*{"review_id":0, table:"microwaves", table_index:9, "review_text":"Example review", stars:5}*/];
+ export const reviews = [/*{"review_id":0, table:"microwaves", table_index:9, "review_text":"Example review", stars:5}*/];
 
-function addReview(reviewTable, reviewTableIndex, reviewStars, reviewText = "")
+export function addReview(reviewTable, reviewTableIndex, reviewStars, reviewText = "")
 {
     reviews.push({"item_id":reviews.length, "table":reviewTable, "table_index":reviewTableIndex, "stars":reviewStars});
     // a bug! this should be >0! 

@@ -1,4 +1,67 @@
-import { buildings, microwaves, printers, vending_machines, rooms } from '../database/database.js';
+import { buildings, microwaves, printers, vending_machines, rooms, addReview } from '../database/database.js';
+ 
+const reviewContainer = document.getElementById('review_contatiner');
+const reviewHeading = document.getElementById('Review');
+const reviewTargetDetails = document.getElementById('review_target_details');
+const reviewTargetId = document.getElementById('review-target-id');
+const reviewForm = reviewContainer?.querySelector('form');
+const reviewTextarea = document.getElementById('user-review');
+let activeReviewMicrowave = null;
+
+function updateReviewTarget(microwave) {
+    activeReviewMicrowave = microwave;
+
+    if (!reviewHeading || !reviewTargetDetails || !reviewTargetId) {
+        return;
+    }
+
+    if (microwave) {
+        reviewHeading.textContent = `Leave a review for Microwave #${microwave.microwave_id}`;
+        reviewTargetDetails.textContent = `${microwave.location_description || 'Location unknown'} • Building ${microwave.building_id}`;
+        reviewTargetId.value = microwave.microwave_id;
+    } else {
+        reviewHeading.textContent = 'Select a microwave on the map';
+        reviewTargetDetails.textContent = 'Choose a microwave marker to connect your review to that location.';
+        reviewTargetId.value = '';
+    }
+}
+
+if (reviewForm) {
+    reviewForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (!activeReviewMicrowave) {
+            if (reviewTargetDetails) {
+                reviewTargetDetails.textContent = 'Select a microwave on the map before submitting your review.';
+            }
+            return;
+        }
+
+        const reviewText = reviewTextarea?.value.trim() || '';
+        const emailAddress = 'contactmeecrowaveh@gmail.com';
+        const subject = `Microwave review for #${activeReviewMicrowave.microwave_id}`;
+        const body = [
+            `Microwave ID: ${activeReviewMicrowave.microwave_id}`,
+            `Location: ${activeReviewMicrowave.location_description || 'Unknown'}`,
+            `Building ID: ${activeReviewMicrowave.building_id}`,
+            '',
+            reviewText
+        ].join('\n');
+
+        addReview('microwaves', activeReviewMicrowave.microwave_id, 5, reviewText);
+
+        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+
+        if (reviewTargetDetails) {
+            reviewTargetDetails.textContent = `Review drafted for Microwave #${activeReviewMicrowave.microwave_id}.`;
+        }
+
+        if (reviewTextarea) {
+            reviewTextarea.value = '';
+        }
+    });
+}
  
 // ==========================================
 // 1. INITIALIZE MAP ON CAMPUS (Must happen FIRST)
@@ -431,9 +494,12 @@ function populateFloorPins() {
         
         if (targetBuilding && targetingGroup) {
             matchedMicrowaves++;
-            L.marker([m.latitude, m.longitude], { icon: createCustomIcon(markerStyles.microwave) })
-             .bindPopup(`<b>Microwave</b><br>${m.location_description}<br>Room: ${associatedRoom ? associatedRoom.room_number : 'Unknown'}`)
-             .addTo(targetingGroup);
+            const microwaveMarker = L.marker([m.latitude, m.longitude], { icon: createCustomIcon(markerStyles.microwave) })
+             .bindPopup(`<b>Microwave</b><br>${m.location_description}<br>Room: ${associatedRoom ? associatedRoom.room_number : 'Unknown'}`);
+
+            microwaveMarker.on('click', () => updateReviewTarget(m));
+            microwaveMarker.on('popupopen', () => updateReviewTarget(m));
+            microwaveMarker.addTo(targetingGroup);
         } else if (idx < 3) {
             console.warn(`Microwave index ${idx} failed match. Key used: "${buildingKey}", Layer Found: ${!!targetingGroup}`);
         }
