@@ -43,17 +43,18 @@ ul li a {
     text-decoration: none;
     border-radius: 10px;
 }
-body.dark ul li a {
+body.dark ul li {
     background-color: #2F6690;
 }
 
-ul li a:hover, #theme:hover {
+ul li:hover, #theme:hover {
     background-color: #81c3d7;
 }
 
-body.dark ul li a:hover{
+body.dark ul li:hover{
     background-color: #3A7CA5;
 }
+
 body.dark #theme:hover {
     background-color: #D9DCD6;
 }
