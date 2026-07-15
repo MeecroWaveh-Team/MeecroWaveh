@@ -194,6 +194,34 @@ body.dark form button:hover {
     background-color: #D9DCD6;
     color: black;
 }
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-container label {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Desktop nav */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#hamburger,
+#mobile-menu {
+    display: none;
+}
+
+
 /*--------------- Footer CSS   ---------------*/
 footer{
     margin: 1em;
@@ -262,5 +290,24 @@ footer h6 {
     ul li a {
         font-size: 0.9rem;
         padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    #mobile-menu.show {
+        display: block;
     }
 }
