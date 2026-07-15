@@ -5,7 +5,6 @@ hamburger?.addEventListener("click", () => {
     mobileMenu.classList.toggle("show");
 });
 
-// Close menu when clicking outside
 document.addEventListener("click", (e) => {
     if (
         !mobileMenu.contains(e.target) &&

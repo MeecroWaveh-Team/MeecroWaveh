@@ -3,14 +3,12 @@ const themeButtons = [
     document.getElementById("theme-mobile")
 ].filter(Boolean);
 
-// Load saved theme
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
     document.body.classList.add("dark");
 }
 
-// Update button text
 function updateButtons() {
     const isDark = document.body.classList.contains("dark");
 
@@ -23,7 +21,7 @@ function updateButtons() {
 
 updateButtons();
 
-// Toggle theme
+
 function toggleTheme() {
     document.body.classList.toggle("dark");
 
@@ -36,7 +34,6 @@ function toggleTheme() {
     updateButtons();
 }
 
-// Add listeners to all theme buttons
 themeButtons.forEach(button => {
     button.addEventListener("click", toggleTheme);
 });
