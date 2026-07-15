@@ -88,7 +88,11 @@ export const vending_machines = [{"vending_machine_id":6, "vendor":"7 Up", "loca
  {"vending_machine_id":19, "vendor":"Crossroads (Snacks)", "location_description":"Across the hall from the equipment rental room", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496, "floor":2},
  {"vending_machine_id":20, "vendor":"", "location_description":"Against the north wall just inside the northwest entrance", "building_id":11, "room_id":0, "latitude":43.81987, "longitude":-111.78584, "floor":1},
  {"vending_machine_id":21, "vendor":"", "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81921, "longitude":-111.7817, "floor":1},
- {"vending_machine_id":22, "vendor":"", "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82087, "longitude":-111.78233, "floor":2}];
+ {"vending_machine_id":22, "vendor":"", "location_description":"Unknown", "building_id":14, "room_id":0, "latitude":43.82087, "longitude":-111.78233, "floor":2},
+ {"vending_machine_id":23, "vendor":"Good to Go", "location_description":"Against the north wall, under the main staircase", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452, "floor":2},
+ {"vending_machine_id":24, "vendor":"7 Up", "location_description":"Against the north wall, under the main staircase", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452, "floor":2},
+ {"vending_machine_id":25, "vendor":"Pepsi", "location_description":"Against the north wall, under the main staircase", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452, "floor":2},
+ {"vending_machine_id":26, "vendor":"Goot to Go", "location_description":"Against the north wall, under the main staircase", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452, "floor":2}];
  let vending_machine_has_items = [{"vending_machine_id":9, "item_id":6, "slot":"101"},
  {"vending_machine_id":9, "item_id":7, "slot":"103"},
  {"vending_machine_id":9, "item_id":8, "slot":"105"},
