@@ -15,24 +15,59 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
+        <script src="js_files/menu.js" defer></script>
 </head>
 
 <body class="bg-blue-100 text-slate-800 transition-colors duration-300">
-    <header class="flex flex-col md:flex-row justify-between items-center p-4 gap-4">
-        <div id="logo">
-            <img class="icon" src="images\icon-microwave_200x200.png">
-            <h1 class="text-2x1 md:text-4x1 font-bold">MeecroWaveh</h1>
+    <header class="relative flex justify-between items-center p-4">
+
+        <div id="logo" class="flex items-center gap-3">
+            <img class="icon w-20 h-20" src="images/icon-microwave_200x200.png">
+            <h1 class="text-3xl font-bold">MeecroWaveh</h1>
         </div>
-        <ul class="flex flex-col md:flex-row gap-2">
-            <li><a href="index.html">Map</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button id="theme" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">Dark Mode</button>
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">Map</a>
+
+            <a href="contact.html">Contact</a>
+
+            <button id="theme" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">Dark Mode</button>
+
+        </nav>
+
+        <button
+            id="hamburger"
+            class="md:hidden text-4xl p-2"
+            aria-label="Menu">
+            ☰
+        </button>
+
+        <nav id="mobile-menu" class="absolute top-full right-4 mt-2 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 w-52 z-[1000]">
+
+            <div class="flex flex-col gap-3">
+
+                <a href="index.html">Map</a>
+                <a href="contact.html">Contact</a>
+
+                <button id="theme-mobile" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">Dark Mode</button>
+
+            </div>
+
+        </nav>
+
     </header>
     
     <div class="explanation">
         <p>Find microwaves, vending machines, and printers on the BYU-I campus.</p>
     </div>
+
+    <div class="filter-container">
+            <label><input type="checkbox" id="showMicrowaves" checked>Microwaves</label>
+            <label><input type="checkbox" id="showPrinters" checked>Printers</label>
+            <label><input type="checkbox" id="showVending" checked>Vending Machines</label>
+    </div>
+
     <div id="map"></div>                        <!-- The map gets loaded here -->
     <div id="item_details"></div>               <!-- Details about respective item (microwave, vendor, printer) show up here -->
     <div id="review_section"></div>             <!-- Users can rate the item and add comments about the item that will show up publicly -->

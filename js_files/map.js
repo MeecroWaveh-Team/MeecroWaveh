@@ -6,6 +6,9 @@ const reviewTargetDetails = document.getElementById('review_target_details');
 const reviewTargetId = document.getElementById('review-target-id');
 const reviewForm = reviewContainer?.querySelector('form');
 const reviewTextarea = document.getElementById('user-review');
+const microwaveLayer = L.layerGroup();
+const printerLayer = L.layerGroup();
+const vendingLayer = L.layerGroup();
 let activeReviewMicrowave = null;
 
 function updateReviewTarget(microwave) {
@@ -518,6 +521,7 @@ function populateFloorPins() {
 
             microwaveMarker.on('click', () => updateReviewTarget(m));
             microwaveMarker.on('popupopen', () => updateReviewTarget(m));
+            microwaveLayer.addLayer(microwaveMarker);
             microwaveMarker.addTo(targetingGroup);
         } else if (idx < 3) {
             console.warn(`Microwave index ${idx} failed match. Key used: "${buildingKey}", Layer Found: ${!!targetingGroup}`);
@@ -536,9 +540,10 @@ function populateFloorPins() {
         
         const targetingGroup = buildingFloorMap[buildingKey]?.[floorNum];
         if (targetingGroup) {
-            L.marker([p.latitude, p.longitude], { icon: createCustomIcon(markerStyles.printer) })
-             .bindPopup(`<b>Printer Pin</b><br>${p.location_description}`)
-             .addTo(targetingGroup);
+            const printerMarker = L.marker([p.latitude, p.longitude], { icon: createCustomIcon(markerStyles.printer) })
+             .bindPopup(`<b>Printer Pin</b><br>${p.location_description}`);
+             printerLayer.addLayer(printerMarker);
+             printerMarker.addTo(targetingGroup);
         }
     });
     // --- Apply the exact same logic below to vending machines ---
@@ -550,9 +555,10 @@ function populateFloorPins() {
         
         const targetingGroup = buildingFloorMap[buildingKey]?.[floorNum];
         if (targetingGroup) {
-            L.marker([v.latitude, v.longitude], { icon: createCustomIcon(markerStyles.vending) })
-             .bindPopup(`<b>Vending Machine (${v.vendor || 'Snacks/Drinks'})</b><br>${v.location_description}`)
-             .addTo(targetingGroup);
+            const vendingMarker = L.marker([v.latitude, v.longitude], { icon: createCustomIcon(markerStyles.vending) })
+             .bindPopup(`<b>Vending Machine (${v.vendor || 'Snacks/Drinks'})</b><br>${v.location_description}`);
+             vendingLayer.addLayer(vendingMarker);
+             vendingMarker.addTo(targetingGroup);
         }
     });
 }
@@ -646,3 +652,24 @@ function displayZoomMessage(load_it) {
     }
 }
 
+const microwaveBox = document.getElementById("showMicrowaves");
+const printerBox = document.getElementById("showPrinters");
+const vendingBox = document.getElementById("showVending");
+
+function updateFilters() {
+    microwaveLayer.eachLayer(marker => {
+        marker.setOpacity(microwaveBox.checked ? 1 : 0);
+    });
+
+    printerLayer.eachLayer(marker => {
+        marker.setOpacity(printerBox.checked ? 1 : 0);
+    });
+
+    vendingLayer.eachLayer(marker => {
+        marker.setOpacity(vendingBox.checked ? 1 : 0);
+    });
+}
+
+microwaveBox?.addEventListener("change", updateFilters);
+printerBox?.addEventListener("change", updateFilters);
+vendingBox?.addEventListener("change", updateFilters);
