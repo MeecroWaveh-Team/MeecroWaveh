@@ -32,7 +32,7 @@ To recreate the development environment, you need the following software and/or 
 * Visual Studio Code version 1.129.1
 * Leaflet 1.9.4
 * tailwindcss 4.3.0
-* MySQL
+* MySQL Workbench 8.0.40
 * GitHub Desktop 3.6.3 (x64)
 
 ## Useful Websites to Learn More
